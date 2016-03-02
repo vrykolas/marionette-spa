@@ -1,0 +1,10 @@
+@import "bootstrap-variables";
+
+$unauthenticated-background-top: #1c232b;
+$unauthenticated-background-bottom: #999999;
+$unauthenticated-background: mix($unauthenticated-background-top, $unauthenticated-background-bottom, 50%);
+$unauthenticated-form-background: #ffffff;
+$unauthenticated-form-text: #999999;
+$unauthenticated-form-radius: 4px;
+
+$authenticated-background: #f4f4f4;

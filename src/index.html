@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Serviceworks</title>
+
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <section id="page"></section>
+
+    <!-- build:js js/lib.js -->
+      <!-- bower:js -->
+      <script src="../bower_components/jquery/dist/jquery.js"></script>
+      <script src="../bower_components/lunr.js/lunr.js"></script>
+      <script src="../bower_components/underscore/underscore.js"></script>
+      <script src="../bower_components/backbone/backbone.js"></script>
+      <script src="../bower_components/backbone-super/backbone-super/backbone-super.js"></script>
+      <script src="../bower_components/backbone-relational/backbone-relational.js"></script>
+      <script src="../bower_components/backbone.obscura/backbone.obscura.js"></script>
+      <script src="../bower_components/backbone-poller/backbone.poller.js"></script>
+      <script src="../bower_components/backbone.babysitter/lib/backbone.babysitter.js"></script>
+      <script src="../bower_components/backbone.wreqr/lib/backbone.wreqr.js"></script>
+      <script src="../bower_components/marionette/lib/core/backbone.marionette.js"></script>
+      <script src="../bower_components/handlebars/handlebars.js"></script>
+      <script src="../bower_components/marionette.handlebars/dist/marionette.handlebars.js"></script>
+      <script src="../bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+      <script src="../bower_components/jwt-decode/build/jwt-decode.js"></script>
+      <script src="../bower_components/backbone.validation/dist/backbone-validation.js"></script>
+      <script src="../bower_components/i18next/i18next.min.js"></script>
+      <!-- endbower -->
+      <script src="../bower_components/backbone-forms/distribution/templates/bootstrap3.js"></script>
+    <!-- endbuild -->
+    <!-- build:js js/app.js -->
+      <script type="text/javascript" src="js/libs/**/*.js"></script>
+      <script type="text/javascript" src="js/config/config.js"></script>
+      <script type="text/javascript" src="js/setup.js"></script>
+      <script type="text/javascript" src="../.tmp/templates.js"></script>
+      <script type="text/javascript" src="js/models/**/*.js"></script>
+      <script type="text/javascript" src="js/collections/**/*.js"></script>
+      <script type="text/javascript" src="js/views/**/*.js"></script>
+      <script type="text/javascript" src="js/controllers/**/*.js"></script>
+      <script type="text/javascript" src="js/routers/**/*.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

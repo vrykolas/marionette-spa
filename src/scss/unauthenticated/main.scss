@@ -1,0 +1,28 @@
+/* Page Backgrounds */
+body.unauthenticated {
+  background-color: $unauthenticated-background;
+  background: linear-gradient(to bottom, $unauthenticated-background-top 0%, $unauthenticated-background-bottom 100%);
+}
+
+/* Dialogs */
+body.unauthenticated {
+  #header {
+    margin-top: 20px;
+  }
+
+  #header #logo,
+  #content form {
+    background-color: $unauthenticated-form-background;
+    color: $unauthenticated-form-text;
+  }
+
+  #header #logo {
+    border-radius: $unauthenticated-form-radius $unauthenticated-form-radius 0 0;
+    padding-top: floor(($grid-gutter-width / 2));
+  }
+
+  #content form {
+    border-radius: 0 0 $unauthenticated-form-radius $unauthenticated-form-radius;
+    padding-bottom: floor(($grid-gutter-width / 2));
+  }
+}
