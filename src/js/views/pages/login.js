@@ -25,7 +25,8 @@ window.SW.Views.Pages.Login = Marionette.ItemView.extend({
     }
 
     if(!_.isEmpty(this.validationErrors)) {
-      return this.render();
+      this.render();
+      return;
     }
 
     this.model.login(password);
