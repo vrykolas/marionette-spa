@@ -13,6 +13,8 @@
   ],
   "dependencies": {
     "lunr.js": "^0.6.0",
+    "jquery": "~2",
+    "handlebars": "~3",
     "backbone-deep-model": "^0.10.4",
     "backbone-super": "^1.0.4",
     "backbone-relational": "^0.10.0",
