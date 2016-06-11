@@ -1,22 +1,27 @@
 <div class="row">
   <form class="col-md-4 col-md-offset-4 clearfix" id="login">
+    {{#if validationErrors.invalidLogin}}
+      <div class="form-group clearfix has-error">
+        <label class="control-label pull-right small invalid-login-error">{{validationErrors.invalidLogin}} Bob</label>
+      </div>
+    {{/if}}
     <div class="form-group clearfix{{#if validationErrors.email}} has-error{{/if}}">
       <label for="email">Email address</label>
-      <input type="email" class="form-control" id="email" placeholder="Email" value="{{email}}">
+      <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="{{email}}">
       {{#if validationErrors.email}}
-        <label class="control-label pull-right small" for="email">{{validationErrors.email}}</label>
+        <label class="control-label pull-right small email-error" for="email">{{validationErrors.email}}</label>
       {{/if}}
     </div>
     <div class="form-group clearfix{{#if validationErrors.password}} has-error{{/if}}">
       <label for="password">Password</label>
-      <input type="password" class="form-control" id="password" placeholder="Password">
+      <input type="password" class="form-control" id="password" name="password" placeholder="Password">
       {{#if validationErrors.password}}
-        <label class="control-label pull-right small" for="password">{{validationErrors.password}}</label>
+        <label class="control-label pull-right small password-error" for="password">{{validationErrors.password}}</label>
       {{/if}}
     </div>
     <div class="form-group clearfix">
       <a href="/forgotten-password" class="forgotten-password-link pull-right">Forgotten Password</a>
     </div>
-    <button type="submit" class="btn btn-success pull-right">Login</button>
+    <button type="submit" class="btn btn-success pull-right login-button">Login</button>
   </form>
 </div>
