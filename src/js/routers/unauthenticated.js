@@ -13,7 +13,6 @@ SW.Routers.Unauthenticated = new Marionette.FilteredAppRouter({
     }
 
     jQuery(document).find('body').removeClass('authenticated').addClass('unauthenticated');
-    console.log('before unauthenticated route');
     if(!window.App.rootView || !(window.App.rootView instanceof SW.Views.Layouts.Unauthenticated)) {
       window.App.rootView = new SW.Views.Layouts.Unauthenticated();
       window.App.Page.empty();
@@ -21,6 +20,5 @@ SW.Routers.Unauthenticated = new Marionette.FilteredAppRouter({
     }
   },
   after: function() {
-    console.log('after unauthenticated route');
   }
 });
