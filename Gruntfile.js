@@ -115,10 +115,17 @@ module.exports = function(grunt) {
       ]
     },
 
-    mocha: {
+    mocha_casperjs: {
+      options: {
+        'mocha-path': 'node_modules/mocha',
+        'chai-path': 'node_modules/chai',
+        'casper-chai-path': 'node_modules/casper-chai',
+        timeout: 2000,
+        casperTimeout: 1000
+      },
       spec: {
         src: [
-          'tests/spec/**/*.html'
+          'tests/specs/**/*.js'
         ]
       }
     },
@@ -142,7 +149,8 @@ module.exports = function(grunt) {
           'src/js/**/*.js'
         ],
         tasks: [
-          'build-usemin'
+          'build-usemin',
+          'test'
         ]
       },
       images: {
@@ -159,7 +167,8 @@ module.exports = function(grunt) {
         ],
         tasks: [
           'handlebars',
-          'build-usemin'
+          'build-usemin',
+          'test'
         ]
       },
       html: {
@@ -175,7 +184,8 @@ module.exports = function(grunt) {
           'bower.json'
         ],
         tasks: [
-          'build'
+          'build',
+          'test'
         ]
       }
     },
@@ -210,7 +220,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-eslint');
-  grunt.loadNpmTasks('grunt-mocha');
+  grunt.loadNpmTasks('grunt-mocha-casperjs');
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-usemin');
@@ -220,7 +230,7 @@ module.exports = function(grunt) {
     'eslint'
   ]);
   grunt.registerTask('test', [
-    'mocha'
+    'mocha_casperjs'
   ]);
   grunt.registerTask('build-usemin', [
     'useminPrepare',
