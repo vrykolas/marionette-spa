@@ -6,7 +6,9 @@ module.exports = {
 
   // - - - - WEBDRIVER-IO  - - - -
   webdriverio: {
+    coloredLogs: true,
     logLevel: 'silent',
+    screenshotPath: './screenshots',
     waitforTimeout: 500,
     waitforInterval: 250
   },

@@ -2,7 +2,7 @@
   <form class="col-md-4 col-md-offset-4 clearfix" id="login">
     {{#if validationErrors.invalidLogin}}
       <div class="form-group clearfix has-error">
-        <label class="control-label pull-right small invalid-login-error">{{validationErrors.invalidLogin}} Bob</label>
+        <label class="control-label pull-right small invalid-login-error">{{validationErrors.invalidLogin}}</label>
       </div>
     {{/if}}
     <div class="form-group clearfix{{#if validationErrors.email}} has-error{{/if}}">

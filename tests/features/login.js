@@ -1,6 +1,5 @@
 var config = require('../features-config');
 
-
 describe('Login Page', function() {
   before(function() {
     browser.url(config.URL.dev + '/login');
